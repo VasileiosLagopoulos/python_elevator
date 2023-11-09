@@ -50,16 +50,17 @@ while elevator_capacity < 1:
     print("The capacity of the elevator must be over 0, please type again: ")
     elevator_capacity = int(input())
 
-
+# Simple print for informational purposes
 print("The number of floors is:" , num_of_floors)
 print("The capacity of the elevator is: " , elevator_capacity)
 
+# Creating a variable number of lists, based on user's input
 header_count = num_of_floors + 1
 header = []
 for i in range(header_count):
   header.append([])
 
-
+# Reading the generated file as 2-dimensional list
 with open(f"./queues{num_of_floors}.txt", "r") as file:
   count = 0
   k = file.readlines()
