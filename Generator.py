@@ -11,8 +11,8 @@ class Generator:
         # The text file is writen character by character so I use "a" - append
         with open(f"./queues{floors}.txt", "a") as file:
             for i in range(floors + 1):
-                # I set here a limit of 50 person waiting per queue, it can be modified though
-                num_of_people = random.randint(1,50)
+                # I set here a limit of 30 person waiting per queue, it can be modified though
+                num_of_people = random.randint(1,30)
                 for p in range(num_of_people):
                     number = random.randint(0, floors)
                     while number == i:

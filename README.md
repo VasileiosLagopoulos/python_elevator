@@ -5,7 +5,7 @@ A simple program that simulates the functionality of an elevator
 This program is about simulating the functionality of an elevator in variable environment
 , so the total number of floors and the capacity of the elevator are given as input from
 the user and for the queues of people waiting for the elevator there is a generator.py that 
-gets as input the number of floors and generates randomly, up to 50 people, for every floor (queue).
+gets as input the number of floors and generates randomly, up to 30 people, for every floor (queue).
 
 
 # Instructions
