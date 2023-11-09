@@ -66,7 +66,6 @@ with open(f"./queues{num_of_floors}.txt", "r") as file:
   k = file.readlines()
   for i in k:
     header[count] = [*i.strip("\n").split(',')]
-    print(header[count])
     count = count + 1
 
 elevator = Elevator(elevator_capacity, num_of_floors)
