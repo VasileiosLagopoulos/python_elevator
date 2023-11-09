@@ -38,7 +38,7 @@ class Elevator :
         if self.direction == "up":
             if len(self.passengers) > 0:
                 maximum = max(self.passengers)
-                if self.floor == maximum:
+                if self.floor == maximum or self.floor == self.total_floors:
                     self.direction = "down"
                     self.floor -= 1
                 else:
@@ -51,7 +51,7 @@ class Elevator :
         else:
             if len(self.passengers) > 0:
                 minimum = min(self.passengers)
-                if self.floor == minimum:
+                if self.floor == minimum or self.floor==0:
                     self.direction = "up"
                     self.floor += 1
                 else:

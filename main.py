@@ -1,5 +1,6 @@
-import queue
 from Elevator import Elevator
+from Generator import Generator
+
 
 def finished():
   passengers = 0
@@ -27,6 +28,10 @@ floor = 0
 num_of_floors = -1
 elevator_capacity = -1
 
+# Initialization of generator for the creation of the queues - text files
+generator = Generator()
+
+
 
 # Get number of floors - validate
 print("Type the number of floors(>1): ")
@@ -35,6 +40,8 @@ while num_of_floors < 2:
     print("Number of floors must be over 1, please type again: ")
     num_of_floors = int(input())
 
+
+generator.create_sample(num_of_floors)
 
 # Get elevator capacity - validate
 print("Type the capacity of the elevator(>0): ")
@@ -58,6 +65,7 @@ with open(f"./queues{num_of_floors}.txt", "r") as file:
   k = file.readlines()
   for i in k:
     header[count] = [*i.strip("\n")]
+    print(header[count])
     count = count + 1
 
 elevator = Elevator(elevator_capacity, num_of_floors)
