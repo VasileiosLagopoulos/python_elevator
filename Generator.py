@@ -1,6 +1,7 @@
 import random
 
 # Generator's role is to create sample text files that represent the queues of people waiting 
+# Even if a txt file has been created, you can run the main with the same num of floors and it will be overwritten
 class Generator:
     
     def create_sample(self, floors):

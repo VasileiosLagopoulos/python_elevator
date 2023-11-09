@@ -78,6 +78,7 @@ elevator = Elevator(elevator_capacity, num_of_floors)
 
 # General idea of elevator is that while there are passengers to serve
 # 1. The elevator gets people who are willing to move to its direction as long as they fit in elevator's capacity
+# When people get on the elevator they are removed from the waiting queue
 # 2. The elevator moves, floor by floor, in the direction it should (see Generator.py for the checks made and the logic)
 # 3. The elevator leaves people to their wanted floor and then the iteration begins again 
 # 4. Print report is used for visualization purposes after getting and leaving people
