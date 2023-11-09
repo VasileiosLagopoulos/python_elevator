@@ -18,6 +18,8 @@ class Generator:
                     while number == i:
                         number = random.randint(0, floors)
                     file.write(str(number))
+                    if p != (num_of_people-1):
+                        file.write(",")
                 if i != floors:
                     file.write('\n')
                     

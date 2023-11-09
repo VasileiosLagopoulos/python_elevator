@@ -65,7 +65,7 @@ with open(f"./queues{num_of_floors}.txt", "r") as file:
   count = 0
   k = file.readlines()
   for i in k:
-    header[count] = [*i.strip("\n")]
+    header[count] = [*i.strip("\n").split(',')]
     print(header[count])
     count = count + 1
 
